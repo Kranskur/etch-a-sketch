@@ -16,6 +16,12 @@ function makeGrid(row) {
         }
     }
 }
+function deleteGrid(){
+    const removeRow = document.querySelectorAll(".row")
+    for(let i = 0; i < removeRow.length ; i++){
+        removeRow[i].remove();
+    }
+}
 
 function defaultGrid() {
     makeGrid(16); // 
