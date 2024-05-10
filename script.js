@@ -28,3 +28,17 @@ function defaultGrid() {
 }
 
 defaultGrid();
+
+function changeGridSize(times){
+    const rows = document.querySelectorAll(".row");
+    rows.forEach(row => row.style.width = `${494/times}px`);
+    const grids = document.querySelectorAll(".grid");
+    grids.forEach(grid => grid.style.height = `${344/times}px`);
+}
+const btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+    deleteGrid()
+    let size = prompt("Pick a number for the number of squares per side (max 100):")
+    makeGrid(size);
+    changeGridSize(size);
+})
